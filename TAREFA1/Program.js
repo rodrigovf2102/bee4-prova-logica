@@ -1,22 +1,17 @@
 import fs from 'fs';
 
-let cities;
-
-duplicateAndCopieMapa('mapa.csv');
-
-function duplicateAndCopieMapa(fileName){
-  fs.readFile(fileName, readMapa);
+async function readMapa(){
+  try {
+    const data = await fs.promises.readFile('mapa.csv');
+    const cities = data.toString().split('\n').map(city=>city.split(';'));
+    return cities;
+  } catch (error) {
+    console.log("Erro ao ler o arquivo");
+  }
 }
 
 function writeDuplicatedMapa(cities){
   fs.writeFile('mapaCopie.csv', cities, (error)=>{ if(error) throw error });
-}
-
-function readMapa(error, data){
-  if(error) throw error;
-  cities = data.toString().split('\n');
-  cities = cities.map(city => city.split(';'));
-  duplicatePopulation(cities);
 }
 
 function duplicatePopulation(cities){
@@ -25,6 +20,14 @@ function duplicatePopulation(cities){
     if(i!==0)cities[i] = cities[i].join('; ');
     if(i===0)cities[i] = cities[i].join(';');
   }
-  cities = cities.join('\n');
-  writeDuplicatedMapa(cities);
+  const duplicatedCities = cities.join('\n');
+  return duplicatedCities;
 }
+
+async function solver(){
+  const cities = await readMapa();
+  const duplicatedCities = duplicatePopulation(cities);
+  writeDuplicatedMapa(duplicatedCities);
+}
+
+solver();

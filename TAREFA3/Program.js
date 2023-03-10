@@ -15,23 +15,16 @@ function writeCEPs(ceps){
   fs.writeFile('CEPsWithInfoCopie.csv', ceps, (error)=>{ if(error) throw error });
 }
 
-async function insertCEPInfo(ceps){
+async function insertCEPsInfo(ceps){
   for(let i=1; i < ceps.length; i++){
     const validCep = verifyCEP(ceps[i][0]);
     if(validCep) {
       const data = await getCEPInfo(validCep);
-      ceps[i][1] = data.logradouro;
-      ceps[i][2] = data.complemento;
-      ceps[i][3] = data.bairro;
-      ceps[i][4] = data.localidade;
-      ceps[i][5] = data.uf;
-      ceps[i][6] = data.ddd;
-      ceps[i][7] = data.ibge;
-      ceps[i][8] = data.gia;
+      ceps[i] = [ceps[i][0],data.logradouro, data.complemento, data.bairro, data.localidade, data.uf, data.ddd, data.ibge, data.gia]
       ceps[i] = ceps[i].join(';');
     }
     if(!validCep){
-      ceps[i][1] = "CEP Inválido";
+      ceps[i] = [ceps[i][0],"CEP Inválido"];
       ceps[i] = ceps[i].join(';');
     }
   }
@@ -44,7 +37,7 @@ async function getCEPInfo(cep){
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(error);
+    console.log("Erro ao reber informações da api VIACEP.");
   }
 }
 
@@ -56,7 +49,7 @@ function verifyCEP(cep){
 
 async function solver(){
   const ceps = await readCEPs();
-  const cepsWithInfo = await insertCEPInfo(ceps);
+  const cepsWithInfo = await insertCEPsInfo(ceps);
   writeCEPs(cepsWithInfo);
 }
 

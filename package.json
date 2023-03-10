@@ -5,7 +5,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "TAREFA1": "node TAREFA1/Program.js",
     "TAREFA2": "node TAREFA2/Program.js",
     "TAREFA3": "node TAREFA3/Program.js"

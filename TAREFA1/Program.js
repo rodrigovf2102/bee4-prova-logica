@@ -2,13 +2,13 @@ import fs from 'fs';
 
 let cities;
 
-readCsv('mapa.csv');
+duplicateAndCopieMapa('mapa.csv');
 
-function readCsv(fileName){
+function duplicateAndCopieMapa(fileName){
   fs.readFile(fileName, readMapa);
 }
 
-function writeCsv(cities){
+function writeDuplicatedMapa(cities){
   fs.writeFile('mapaCopie.csv', cities, (error)=>{ if(error) throw error });
 }
 
@@ -22,8 +22,9 @@ function readMapa(error, data){
 function duplicatePopulation(cities){
   for(let i=0; i < cities.length; i++){
     if(i!==0)cities[i][1] = (cities[i][1]*2).toString();
-    cities[i] = cities[i].join('; ');
+    if(i!==0)cities[i] = cities[i].join('; ');
+    if(i===0)cities[i] = cities[i].join(';');
   }
   cities = cities.join('\n');
-  writeCsv(cities);
+  writeDuplicatedMapa(cities);
 }

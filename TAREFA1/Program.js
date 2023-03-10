@@ -11,7 +11,7 @@ async function readMapa(){
 }
 
 function writeDuplicatedMapa(cities){
-  fs.writeFile('mapaCopie.csv', cities, (error)=>{ if(error) throw error });
+  fs.writeFile('mapaDuplicatedCopie.csv', cities, (error)=>{ if(error) throw error });
 }
 
 function duplicatePopulation(cities){

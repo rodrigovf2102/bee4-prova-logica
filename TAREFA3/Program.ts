@@ -1,10 +1,12 @@
 import fs from 'fs';
 import fetch from 'node-fetch';
+import { FileService } from "../Services/FileService.js";
 
 async function readCEPs(){
   try {
-    const data = await fs.promises.readFile('CEPs.csv');
-    const ceps = data.toString().split('\n').map(cep=>cep.split(';'));
+    const data = await FileService.readCSV("CEP.csv");
+    const cepsArray = data.toString().split('\n').map(cep=>cep.split(';'));
+
     return ceps;
   } catch (error) {
     console.log("Erro ao ler o arquivo");

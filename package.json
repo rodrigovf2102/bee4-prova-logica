@@ -5,14 +5,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "TAREFA1": "node TAREFA1/Program.js",
-    "TAREFA2": "node TAREFA2/Program.js",
-    "TAREFA3": "node TAREFA3/Program.js"
+    "TAREFA1": "npx ts-node TAREFA1/Program.ts",
+    "TAREFA2": "npx ts-node TAREFA2/Program.ts",
+    "TAREFA3": "npx ts-node TAREFA3/Program.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "^3.3.0"
+    "node-fetch": "^3.3.0",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.0",
+    "ts-node": "^10.9.1"
   }
 }

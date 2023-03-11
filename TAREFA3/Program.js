@@ -12,7 +12,7 @@ async function readCEPs(){
 }
 
 function writeCEPs(ceps){
-  fs.writeFile('CEPsWithInfoCopie.csv', ceps, (error)=>{ if(error) throw error });
+  fs.writeFile('CEPsWithInfo.csv', ceps, (error)=>{ if(error) throw error });
 }
 
 async function insertCEPsInfo(ceps){

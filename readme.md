@@ -19,4 +19,5 @@ A função bubbleSort foi adicionada com um "toggle(crescente/decrescente)", cas
 
 ## Observação
 
-A propriedade "Unidade", do CEP, foi considerado como sendo o "ddd" da API "viacep";
+1. Programa funcional e testado utilizando node: v16.19.0 e no Linux: Ubuntu 22.04.2 LTS
+2. A propriedade "Unidade", do CEP, foi considerado como sendo o "ddd" da API "viacep";

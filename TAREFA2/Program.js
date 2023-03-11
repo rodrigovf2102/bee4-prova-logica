@@ -11,13 +11,12 @@ async function readMapa(){
 }
 
 function sortMapa(cities){
-  let aux;
   for(let i=1;i<cities.length;i++){
     for(let j=1;j<cities.length;j++){
-      if(cities[i]>cities[j]){
-        aux = cities[i];
-        cities[i] = cities[j];
-        cities[j] = aux;
+      if(cities[j]<cities[j+1]){
+        const aux = cities[j];
+        cities[j] = cities[j+1];
+        cities[j+1] = aux;
       }
     }
   }

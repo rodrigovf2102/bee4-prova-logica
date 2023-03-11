@@ -2,7 +2,7 @@ import { Mapa } from '../Entities/Mapa.js';
 import { FileService } from '../Services/FileService.js';
 
 async function readMapa() {
-  const data = await FileService.readCSV("mapa.csv");
+  const data = await FileService.readCSV("mapaReordenedCopie.csv");
   const mapa = Mapa.csvToMapa(data);
   return mapa;
 }

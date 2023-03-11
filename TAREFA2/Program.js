@@ -30,13 +30,14 @@ function sortMapa(cities){
 }
 
 function writeReordenedMapa(cities){
-  fs.writeFile('mapaReordenedCopie.csv', cities, (error)=>{ if(error) throw error });
+  fs.writeFile('mapaReordened.csv', cities, (error)=>{ if(error) throw error });
 }
 
 async function solve(){
   const cities = await readMapa();
   const reordenedCities = sortMapa(cities);
   writeReordenedMapa(reordenedCities);
+  console.log("Arquivo 'mapaReordened.csv' criado com sucesso!");
 }
 
 solve();

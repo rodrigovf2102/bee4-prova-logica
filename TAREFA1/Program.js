@@ -11,7 +11,7 @@ async function readMapa(){
 }
 
 function writeDuplicatedMapa(cities){
-  fs.writeFile('mapaDuplicatedCopie.csv', cities, (error)=>{ if(error) throw error });
+  fs.writeFile('mapaDuplicated.csv', cities, (error)=>{ if(error) throw error });
 }
 
 function duplicatePopulation(cities){
@@ -28,6 +28,7 @@ async function solver(){
   const cities = await readMapa();
   const duplicatedCities = duplicatePopulation(cities);
   writeDuplicatedMapa(duplicatedCities);
+  console.log("Arquivo 'mapaDuplicated.csv' criado com sucesso!");
 }
 
 solver();

@@ -16,6 +16,7 @@ function writeCEPs(ceps){
 }
 
 async function insertCEPsInfo(ceps){
+  ceps[0] = ceps[0].join(';');
   for(let i=1; i < ceps.length; i++){
     const validCep = verifyCEP(ceps[i][0]);
     if(validCep) {
@@ -51,6 +52,7 @@ async function solver(){
   const ceps = await readCEPs();
   const cepsWithInfo = await insertCEPsInfo(ceps);
   writeCEPs(cepsWithInfo);
+  console.log("Arquivo 'CEPsWithInfo.csv' criado com sucesso!");
 }
 
 solver();

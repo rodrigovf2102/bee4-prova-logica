@@ -1,4 +1,4 @@
-CEP,Logradouro,Complemento,Bairro,Localidade,UF,Unidade,IBGE,GIA
+CEP;Logradouro;Complemento;Bairro;Localidade;UF;Unidade;IBGE;GIA
 22630100;Rua Ulisses Alcântara;;Barra da Tijuca;Rio de Janeiro;RJ;21;3304557;
 22776000;Avenida das Acácias da Península;;Barra da Tijuca;Rio de Janeiro;RJ;21;3304557;
 22290240;Avenida Pasteur;até 213/214;Botafogo;Rio de Janeiro;RJ;21;3304557;

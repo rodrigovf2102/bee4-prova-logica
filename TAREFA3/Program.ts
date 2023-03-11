@@ -18,6 +18,7 @@ async function solver(){
     await ceps[i].setCEPInfo();
   }
   writeCEPs(ceps);
+  console.log("Arquivo 'CEPsWithInfo.csv' criado com sucesso!");
 }
 
 solver();

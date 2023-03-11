@@ -68,13 +68,11 @@ export class CEP {
   }
 
   static arrayToString(ceps : CEP[]) : string {
-    console.log(ceps);
     let cepsString : string[] = []
     for (let i=0; i< ceps.length; i++) {
       const stringCep = CEP.cepToString(ceps[i]);
       cepsString.push(stringCep);
     }
-    console.log(cepsString)
     return cepsString.join("\n");
   }
 

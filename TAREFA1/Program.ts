@@ -9,7 +9,7 @@ async function readMapa() {
 
 function writeDuplicatedMapa(mapa : Mapa) {
   const stringMapa = mapa.toString();
-  FileService.writeCSV(stringMapa, "mapaDuplicatedCopie.csv");
+  FileService.writeCSV(stringMapa, "mapaDuplicated.csv");
 }
 
 function duplicatePopulation(mapa : Mapa) {
@@ -23,6 +23,7 @@ async function solver() : Promise<void> {
   const mapa = await readMapa();
   const duplicatedMapa = duplicatePopulation(mapa);
   writeDuplicatedMapa(duplicatedMapa);
+  console.log("Arquivo 'mapaDuplicated.csv' criado com sucesso!");
 }
 
 solver();

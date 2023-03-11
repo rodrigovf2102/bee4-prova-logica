@@ -8,7 +8,7 @@ export class City {
   }
 
   doublePopulation(){
-    const isNumber = typeof(this.population) === 'number';
+    const isNumber = !isNaN(Number(this.population));
     if(isNumber) this.population = +this.population*2;
   }
 

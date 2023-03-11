@@ -1,47 +1,17 @@
 # Teste prático - Lógica
 
-## Introdução
+## Branches
 
-Este é um teste que aplicamos na seleção de novos desenvolvedores.
+1. Branch "main" utiliza de javascript sem POO para resolução das tarefas ( solução mais simples e menos verbosa );
+2. Branch "programWithOOP" utiliza de typescript e POO para resolução das tarefas ( solução mais robusta e mais verbosa );
 
-Faça um fork desse repositório e acrescente o código. Crie uma pasta para cada solução. Depois disso nos passe o endereço do seu repositório no github para verificação.
+## Como rodar
 
-Você pode utilizar as seguintes linguagens pra resolução dos problemas: Node, Java, CSharp, Javascript, C ou Python
+1. Primeiro clone o repositório na sua maquina;
+2. Em seguida, abre o terminal e acesse o diretorio que o programa esta contido;
+3. Instale as dependências, digite no terminal: "npm i";
+4. Para executar, no terminal digite: "npm run TAREFA1" para executar a tarefa1, "npm run TAREFA2" para executar tarefa2 e "npm run TAREFA3" para executar tarefa3;
 
-## Escopo
+## Extra
 
-Realize as seguintes tarefas:
-
-1 - Crie um programa que multiplique a coluna _"População no último censo"_ do arquivo _"mapa.csv"_ por 2 e grave uma cópia do arquivo alterado.
-
-2 - Crie um programa que reordene o arquivo _"mapa.csv"_ pela coluna _"População no último censo"_ do arquivo, usando bubblesort, e grave uma cópia do arquivo alterado.
-
-3 - Preencha o endereco no arquivo _"CEPs.csv"_ lendo a coluna de cep e buscando na API viacep (https://viacep.com.br/) o endereço equivalente ao CEP e grave uma cópia do arquivo preenchido.
-
-## Resultado
-
-Estrutura da solução (PASTAS):
-
-```
-    TAREFA1
-        Program.cs (ou arquivos da linguagem escolhida)
-    TAREFA2
-        Program.cs (ou arquivos da linguagem escolhida)
-    TAREFA3
-        Program.cs (ou arquivos da linguagem escolhida)
-```
-
-O que avaliamos:
-
-- Qualidade de código
-- Código limpo
-- Simplicidade
-- Lógica de programação
-- Conceitos de orientação a objetos
-- Otimização do código implementado
-- Organização e padrão de Commits
-
-## Dúvidas
-
-Fique a vontade para nos procurar, o RH vai mandar o contato para dúvidas
-Nos diga o que achou do teste
+A função bubbleSort foi adicionada com um "interruptor (crescente/decrescente)", caso o arquivo readFile e writeFile sejam os mesmos, cada execução da TAREFA2 vai variar a ordenção de crescente / descrescente continuamente;

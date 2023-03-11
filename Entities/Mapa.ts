@@ -26,4 +26,17 @@ export class Mapa {
     return new Mapa(cities);
   }
 
+  sortCities(){
+    let aux : City;
+    for(let i=1;i<this.cities.length;i++){
+      for(let j=1;j<this.cities.length;j++){
+        if(this.cities[i]>this.cities[j]){
+          aux = this.cities[i];
+          this.cities[i] = this.cities[j];
+          this.cities[j] = aux;
+        }
+      }
+    }
+  }
+
 }

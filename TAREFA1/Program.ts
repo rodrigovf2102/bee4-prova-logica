@@ -2,13 +2,9 @@ import { Mapa } from "../Entities/Mapa.js";
 import { FileService } from "../Services/FileService.js";
 
 async function readMapa() {
-  try {
     const data = await FileService.readCSV("mapa.csv");
     const mapa = Mapa.csvToMapa(data);
     return mapa;
-  } catch (error) {
-    console.log("Erro ao ler o arquivo");
-  }
 }
 
 function writeDuplicatedMapa(mapa : Mapa) {

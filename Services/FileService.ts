@@ -2,8 +2,12 @@ import * as fs from 'fs';
 
 export class FileService {
   static async readCSV(file : string) {
-    const data = await fs.promises.readFile(file);
-    return data;
+    try {
+      const data = await fs.promises.readFile(file);
+      return data;
+    } catch (error) {
+      throw error;
+    }
   }
 
   static writeCSV(data : string, file : string) {

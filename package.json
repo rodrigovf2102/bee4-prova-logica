@@ -6,9 +6,9 @@
   "main": "index.js",
   "scripts": {
     "docker:image": "docker images | grep bee4ts || docker build -t bee4ts ./",
-    "docker:TAREFA1": "npm run docker:image && docker run -v ./:/usr/src bee4 npm run TAREFA1",
-    "docker:TAREFA2": "npm run docker:image && docker run -v ./:/usr/src bee4 npm run TAREFA2",
-    "docker:TAREFA3": "npm run docker:image && docker run -v ./:/usr/src bee4 npm run TAREFA3",
+    "docker:TAREFA1": "npm run docker:image && docker run -v ./:/usr/src bee4ts npm run TAREFA1",
+    "docker:TAREFA2": "npm run docker:image && docker run -v ./:/usr/src bee4ts npm run TAREFA2",
+    "docker:TAREFA3": "npm run docker:image && docker run -v ./:/usr/src bee4ts npm run TAREFA3",
     "TAREFA1": "npx ts-node TAREFA1/Program.ts",
     "TAREFA2": "npx ts-node TAREFA2/Program.ts",
     "TAREFA3": "npx ts-node TAREFA3/Program.ts"

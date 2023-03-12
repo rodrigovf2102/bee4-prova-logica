@@ -13,6 +13,14 @@
 4. Instale as dependências, digite no terminal: "npm i";
 5. Para executar, no terminal digite: "npm run TAREFA1" para executar a tarefa1, "npm run TAREFA2" para executar tarefa2 e "npm run TAREFA3" para executar tarefa3;
 
+
+## Docker
+
+Caso tenha problema de incompatibilidade com o SO ou com o node, execute as tarefas por um container docker:
+1. Para rodar a TAREFA1 execute o comando "npm run docker:TAREFA1" no terminal;
+2. Para rodar a TAREFA2 execute o comando "npm run docker:TAREFA2" no terminal;
+3. Para rodar a TAREFA3 execute o comando "npm run docker:TAREFA3" no terminal;
+
 ## Extra
 
 A função bubbleSort foi adicionada com um "toggle(crescente/decrescente)", caso o arquivo readFile e writeFile sejam os mesmos, cada execução da TAREFA2 vai variar a ordenção de crescente / descrescente continuamente;
@@ -20,4 +28,4 @@ A função bubbleSort foi adicionada com um "toggle(crescente/decrescente)", cas
 ## Observação
 
 1. Programa funcional e testado utilizando node: v16.19.0 e no Linux: Ubuntu 22.04.2 LTS
-2. A propriedade "Unidade", do CEP, foi conseiderado como sendo o "ddd" da API "viacep";
+2. A propriedade "Unidade", do CEP, foi considerado como sendo o "ddd" da API "viacep";

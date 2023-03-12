@@ -16,10 +16,11 @@
 
 ## Docker
 
-Caso tenha problema de incompatibilidade com o SO ou com o node, execute as tarefas por um container docker:
+Caso tenha problema de incompatibilidade com o node, execute as tarefas por um container docker:
 1. Para rodar a TAREFA1 execute o comando "npm run docker:TAREFA1" no terminal;
 2. Para rodar a TAREFA2 execute o comando "npm run docker:TAREFA2" no terminal;
-3. Para rodar a TAREFA3 execute o comando "npm run docker:TAREFA3" no terminal;
+3. Para rodar a TAREFA3 execute o comando "npm run docker:TAREFA3" no terminal;<br>
+(Comandos do docker no package-json incompatíveis com o SO windows)
 
 ## Extra
 

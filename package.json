@@ -5,6 +5,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "docker:image": "docker images | grep bee4 || docker build -t bee4 ./",
+    "docker:TAREFA1": "npm run docker:image && docker run -v ./:/usr/src bee4 npm run TAREFA1",
+    "docker:TAREFA2": "npm run docker:image && docker run -v ./:/usr/src bee4 npm run TAREFA2",
+    "docker:TAREFA3": "npm run docker:image && docker run -v ./:/usr/src bee4 npm run TAREFA3",
     "TAREFA1": "node TAREFA1/Program.js",
     "TAREFA2": "node TAREFA2/Program.js",
     "TAREFA3": "node TAREFA3/Program.js"
